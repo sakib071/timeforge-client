@@ -1,23 +1,31 @@
-import {
-  FaChevronDown,
-  FaFacebook,
-  FaGlobe,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaFacebook, FaGlobe, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const links = (
     <>
-      <li className='text-sm font-medium'>Privacy</li>
-      <li className='text-sm font-medium'>Terms and Conditions</li>
-      <li className='text-sm font-medium'>Status</li>
-      <li className='text-sm font-medium'>Security</li>
-      <li className='text-sm font-medium'>Cookie Settings</li>
-      <li className='text-sm font-medium'>Your Privacy Choices</li>
+      <Link to="/privacy">
+        <li className="text-sm font-medium">Privacy</li>
+      </Link>
+      <Link to="/termsAndConditions">
+        <li className="text-sm font-medium">Terms and Conditions</li>
+      </Link>
+      <Link to="/status">
+        <li className="text-sm font-medium">Status</li>
+      </Link>
+      <Link to="/security">
+        <li className="text-sm font-medium">Security</li>
+      </Link>
+      <Link to="/cookieSettings">
+        <li className="text-sm font-medium">Cookie Settings</li>
+      </Link>
+      <Link to="/yourPrivacyChoices">
+        <li className="text-sm font-medium">Your Privacy Choices</li>
+      </Link>
     </>
   );
   return (
-    <footer className='bg-white'>
+    <footer className='bg-white dark:bg-d1'>
       <hr className='max-w-screen-xl mx-auto text-gray-600'></hr>
       <div className='max-w-screen-xl px-4 py-8 mx-auto sm:px-6 lg:px-8'>
         <div className='sm:flex sm:justify-between'>
